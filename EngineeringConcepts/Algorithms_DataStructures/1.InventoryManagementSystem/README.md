@@ -22,3 +22,9 @@ Build an inventory management system to add, update, delete and display products
 
 ## 📸 Output Screenshot
 ![Output](./Output/Output.png)
+
+## How to Run
+
+```bash
+cd Algorithms_DataStructures/1.InventoryManagementSystem/Code
+dotnet run
