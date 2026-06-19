@@ -56,5 +56,5 @@ Below is the sample output from the console:
 ## How to Run
 
 ```bash
-cd DesignPatternsandPrinciples/1.Singleton_Pattern/Code
+cd DesignPatternsandPrinciples/1.SingletonPattern/Code
 dotnet run
