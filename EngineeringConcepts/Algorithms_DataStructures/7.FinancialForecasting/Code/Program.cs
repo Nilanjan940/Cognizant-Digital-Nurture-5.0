@@ -1,7 +1,6 @@
 ﻿﻿/*
- * Week 1 - Data Structures
  * Exercise 7: Financial Forecasting
- * Author: Dhruv Kushwaha
+ * Author: Nilanjan Pradhan
  * Description: Recursive algorithm to forecast future values based on past growth rates.
  */
 
