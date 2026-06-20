@@ -183,7 +183,7 @@ Purpose:
 ```text
 AdvancedSQLServer
 │
-└── 1. SQL Exercise-Advanced Concepts
+└── 1.SQLExercise-Advancedconcepts
     │
     ├── Queries.sql
     │
@@ -215,7 +215,7 @@ Authentication: Windows Authentication
 Open:
 
 ```text
-AdvancedSQserver/1. SQL Exercise-Advanced Concepts/Queries.sql
+AdvancedSQLserver/1.SQLExercise-Advancedconcepts/Queries.sql
 ```
 
 Execute the script in:
