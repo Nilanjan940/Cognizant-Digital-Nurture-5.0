@@ -1,4 +1,4 @@
-# .NET
+# Build folders
 **/bin/
 **/obj/
 
@@ -7,12 +7,25 @@
 *.user
 *.suo
 
+# Rider
+.idea/
+
 # VS Code
 .vscode/
+
+# EF Core Migrations Snapshot Backup
+*.dbmdl
+
+# SQL Server
+*.mdf
+*.ldf
 
 # Logs
 *.log
 
+# Temporary files
+*.tmp
+
 # OS files
-Thumbs.db
 .DS_Store
+Thumbs.db
