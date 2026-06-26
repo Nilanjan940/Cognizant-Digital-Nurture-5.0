@@ -1,41 +1,31 @@
-﻿using System;
-
-/*
- * Lab 1: Understanding ORM with a Retail Inventory System
+﻿/*
+ * Lab 2: Setting up Entity Framework Core
  * Author: Nilanjan Pradhan
- * Assignment: Cognizant Digital Nurture 5.0
  */
 
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using RetailInventory.Data;
 
-namespace RetailInventory
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("==================================");
-            Console.WriteLine(" Retail Inventory System ");
-            Console.WriteLine(" Entity Framework Core 8.0 ");
-            Console.WriteLine("==================================");
+Console.WriteLine("Retail Inventory System");
+Console.WriteLine("-----------------------");
 
-            Console.WriteLine("\nLab 1 - Understanding ORM");
+IConfiguration config =
+    new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json")
+    .Build();
 
-            Console.WriteLine("\nORM (Object Relational Mapping)");
-            Console.WriteLine("Maps C# objects to database tables.");
+string connectionString =
+    config.GetConnectionString("RetailDb");
 
-            Console.WriteLine("\nBenefits:");
-            Console.WriteLine("1. Faster Development");
-            Console.WriteLine("2. Less SQL Code");
-            Console.WriteLine("3. Better Maintainability");
-            Console.WriteLine("4. Strongly Typed Queries");
+var options =
+    new DbContextOptionsBuilder<AppDbContext>()
+    .UseSqlServer(connectionString)
+    .Options;
 
-            Console.WriteLine("\nEF Core 8 Features:");
-            Console.WriteLine("- JSON Column Mapping");
-            Console.WriteLine("- Improved Performance");
-            Console.WriteLine("- Compiled Models");
-            Console.WriteLine("- Better Bulk Operations");
+using AppDbContext db =
+    new AppDbContext(options);
 
-            Console.WriteLine("\nLab 1 Completed Successfully.");
-        }
-    }
-}
+Console.WriteLine("Entity Framework Core configured successfully.");
+Console.WriteLine("Connection String Loaded Successfully.");

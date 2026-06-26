@@ -1,121 +1,74 @@
-# Lab 1: Understanding ORM with a Retail Inventory System
+# Retail Inventory Management System
 
-## 👨‍💻 Developer Information
+## Overview
 
-* **Name:** Nilanjan Pradhan
-* **Assignment:** Cognizant Digital Nurture 5.0
-* **Technology:** Entity Framework Core 8.0
-* **Project:** Retail Inventory System
+Retail Inventory Management System is a console application developed using **Entity Framework Core 8** and **SQL Server**.
 
----
-
-# 🧠 Problem Statement
-
-Develop a Retail Inventory System using Entity Framework Core. Before implementing database operations, it is important to understand the concept of Object Relational Mapping (ORM), its benefits, and how Entity Framework Core simplifies database access in .NET applications.
+This project is built incrementally across multiple hands-on labs as part of the **Cognizant Digital Nurture 5.0** program.
 
 ---
 
-# 🎯 Objectives
+## Objectives Completed
 
-* Understand Object Relational Mapping (ORM)
-* Learn the advantages of ORM over traditional SQL programming
-* Compare Entity Framework Core with Entity Framework 6
-* Explore the major features introduced in Entity Framework Core 8
-* Set up the project structure for future EF Core development
-
----
-
-# 📚 Concepts Covered
-
-## What is ORM?
-
-Object Relational Mapping (ORM) is a programming technique that maps C# objects to relational database tables.
-
-Example:
-
-| C# Class | SQL Table  |
-| -------- | ---------- |
-| Product  | Products   |
-| Category | Categories |
-
-Each object property corresponds to a column in the database table.
+- ORM Fundamentals
+- Entity Framework Core Setup
+- SQL Server Configuration
+- Entity Models
+- DbContext Configuration
 
 ---
 
-## Benefits of ORM
-
-* Faster application development
-* Reduces manual SQL writing
-* Improves code readability
-* Better maintainability
-* Strongly typed queries
-* Easier database management
-
----
-
-## Entity Framework Core vs Entity Framework 6
-
-| Feature             | EF Core 8 | EF6     |
-| ------------------- | --------- | ------- |
-| Cross Platform      | ✅         | ❌       |
-| Linux Support       | ✅         | ❌       |
-| Performance         | Excellent | Good    |
-| Modern .NET Support | ✅         | Limited |
-| Cloud Ready         | ✅         | Partial |
-
----
-
-## Entity Framework Core 8 Features
-
-* JSON Column Mapping
-* Improved Query Performance
-* Compiled Models
-* Better Bulk Operations
-* Interceptors
-* Optimized LINQ Translation
-
----
-
-# 📂 Project Structure
+## Project Structure
 
 ```text
-RetailInventory/
+RetailInventory
 │
-├── Data/
-├── DTOs/
-├── Migrations/
-├── Models/
-├── Output/
-│   └── Lab01_Output.png
+├── Data
+│   └── AppDbContext.cs
+│
+├── Models
+│   ├── Product.cs
+│   └── Category.cs
+│
+├── DTOs
+│
+├── Migrations
+│
+├── Output
+│   └── Lab02_Output.png
+│
 ├── Program.cs
-├── RetailInventory.csproj
 ├── appsettings.json
+├── RetailInventory.csproj
 └── README.md
 ```
 
 ---
 
-# ▶️ How to Run
+## Technologies Used
 
-Navigate to the project directory:
+- C#
+- .NET
+- Entity Framework Core 8
+- SQL Server
 
-```bash
-cd EntityFrameworkCore/RetailInventory
-```
+---
 
-Restore dependencies:
+## How to Run
+
+Restore packages
 
 ```bash
 dotnet restore
 ```
 
-Build the project:
+Build project
 
 ```bash
 dotnet build
 ```
 
-Run the application:
+Run application
 
 ```bash
 dotnet run
@@ -123,35 +76,35 @@ dotnet run
 
 ---
 
-# 📸 Output
+## Output
 
-The console output after successful execution is shown below.
+Store the execution screenshot inside
 
-![Lab 1 Output](./Output/Lab01_Output.png)
+```text
+Output/
+```
 
----
+Example
 
-# ✅ Outcome
-
-Successfully understood:
-
-* Object Relational Mapping (ORM)
-* Benefits of ORM
-* Entity Framework Core Architecture
-* Entity Framework Core 8 Features
-* Initial project setup for the Retail Inventory System
+```text
+Output/
+└── Lab02_Output.png
+```
 
 ---
 
-# 🚀 Next Lab
+## Output Screenshot
 
-**Lab 2: Setting Up DbContext and SQL Server Connection**
+> Add the screenshot here after executing Lab 2.
 
-The next lab will cover:
+```
+![Lab 2 Output](Output/Lab02_Output.png)
+```
 
-* Creating Entity Models
-* Configuring DbContext
-* Connecting to SQL Server
-* Using `appsettings.json`
-* Creating the first EF Core Migration
-* Creating the database using Entity Framework Core
+---
+
+## Author
+
+**Nilanjan Pradhan**
+
+Cognizant Digital Nurture 5.0
