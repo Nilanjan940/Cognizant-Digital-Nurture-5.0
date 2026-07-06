@@ -1,0 +1,6 @@
+@_4_WebApi_Handson_HostAddress = http://localhost:5206
+
+GET {{_4_WebApi_Handson_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
