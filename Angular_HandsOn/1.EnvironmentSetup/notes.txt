@@ -1,0 +1,55 @@
+Student Course Portal
+Hands-On 1
+Environment Setup, Project Structure & First Component
+
+------------------------------------------------------
+1. angular.json
+------------------------------------------------------
+Contains the Angular CLI configuration for building, serving, testing, and configuring the application.
+
+------------------------------------------------------
+2. tsconfig.json
+------------------------------------------------------
+Base TypeScript compiler configuration shared by the entire project.
+
+------------------------------------------------------
+3. tsconfig.app.json
+------------------------------------------------------
+TypeScript configuration specifically used for compiling the Angular application.
+
+------------------------------------------------------
+4. package.json
+------------------------------------------------------
+Contains project metadata, dependencies, development dependencies, and npm scripts.
+
+------------------------------------------------------
+5. src/main.ts
+------------------------------------------------------
+Entry point of the Angular application that bootstraps the root application.
+
+------------------------------------------------------
+6. src/app/app.config.ts
+------------------------------------------------------
+Defines application-wide providers, routing configuration, and dependency injection settings for standalone Angular applications.
+
+------------------------------------------------------
+7. src/app/app.component.ts
+------------------------------------------------------
+Defines the root component that serves as the starting point of the application's user interface.
+
+------------------------------------------------------
+8. src/index.html
+------------------------------------------------------
+Main HTML page loaded by the browser into which Angular renders the application.
+
+------------------------------------------------------
+Angular Build Budget
+------------------------------------------------------
+
+maximumWarning
+Displays a warning when the generated bundle size exceeds the configured limit.
+
+maximumError
+Fails the production build when the bundle size exceeds the configured limit.
+
+These settings help developers monitor application size and optimize performance.
