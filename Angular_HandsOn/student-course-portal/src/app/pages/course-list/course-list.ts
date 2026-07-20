@@ -25,7 +25,8 @@ export class CourseList implements OnInit {
       name:'Angular Fundamentals',
       code:'ANG101',
       credits:4,
-      gradeStatus:'passed'
+      gradeStatus:'passed',
+      enrolled:false
     },
 
     {
@@ -33,7 +34,8 @@ export class CourseList implements OnInit {
       name:'TypeScript',
       code:'TS102',
       credits:3,
-      gradeStatus:'pending'
+      gradeStatus:'pending',
+      enrolled:false
     },
 
     {
@@ -41,7 +43,8 @@ export class CourseList implements OnInit {
       name:'Web Development',
       code:'WEB103',
       credits:4,
-      gradeStatus:'failed'
+      gradeStatus:'failed',
+      enrolled:false
     },
 
     {
@@ -49,7 +52,8 @@ export class CourseList implements OnInit {
       name:'Database Systems',
       code:'DB104',
       credits:4,
-      gradeStatus:'passed'
+      gradeStatus:'passed',
+      enrolled:false
     },
 
     {
@@ -57,7 +61,8 @@ export class CourseList implements OnInit {
       name:'Software Engineering',
       code:'SE105',
       credits:3,
-      gradeStatus:'pending'
+      gradeStatus:'pending',
+      enrolled:false
     }
 
   ];
