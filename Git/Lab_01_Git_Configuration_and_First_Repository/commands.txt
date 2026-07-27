@@ -1,0 +1,70 @@
+# Check Git Installation
+git --version
+
+# Configure Git Username
+git config --global user.name "Your Name"
+
+# Configure Git Email
+git config --global user.email "yourmail@example.com"
+
+# Verify Configuration
+git config --global --list
+
+# Verify Notepad++
+notepad++
+
+# Create Alias
+notepad ~/.bashrc
+
+# Add Alias
+alias np='notepad++'
+
+# Reload Bash Profile
+source ~/.bashrc
+
+# Configure Default Editor
+git config --global core.editor "notepad++"
+
+# Verify Default Editor
+git var GIT_EDITOR
+git config --global -e
+
+# Create Project
+mkdir GitDemo
+cd GitDemo
+
+# Initialize Repository
+git init
+
+# Verify Hidden Files
+ls -la
+
+# Create File
+echo "Welcome to Git" > welcome.txt
+
+# Verify File
+ls
+
+# View File
+cat welcome.txt
+
+# Check Status
+git status
+
+# Stage File
+git add welcome.txt
+
+# Commit
+git commit
+
+# Check Status
+git status
+
+# Connect Remote Repository
+git remote add origin <repository-url>
+
+# Pull
+git pull origin master
+
+# Push
+git push origin master
