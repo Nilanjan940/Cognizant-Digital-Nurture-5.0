@@ -2,55 +2,59 @@
 
 ## Objective
 
-- Configure Git on the local machine.
-- Configure username and email.
-- Set Notepad++ as the default Git editor.
+The objective of this lab is to get familiar with basic Git commands and learn how to:
+
+- Setup Git configuration on a local machine.
+- Configure username and email in Git.
+- Integrate Notepad++ with Git and set it as the default editor.
 - Initialize a Git repository.
-- Add and commit a file.
-- Connect a local repository to a remote GitLab repository.
-- Push changes to the remote repository.
+- Create, add, and commit files to a local repository.
+- Connect a local repository with a remote GitHub/GitLab repository.
+- Perform push and pull operations.
 
 ---
 
-## Prerequisites
+# Prerequisites
 
-- Git Bash installed
-- GitLab account
-- Notepad++ installed
-- Internet connection
-
----
-
-## Software Used
-
-- Git
-- Git Bash
-- GitLab
-- Notepad++
+- Git Bash installed on the machine.
+- GitHub/GitLab account.
+- Notepad++ installed.
+- Internet connection.
 
 ---
 
-# Step 1: Git Configuration
+# Software Used
 
-### Check Git Installation
+| Software | Purpose |
+|----------|---------|
+| Git | Version control system |
+| Git Bash | Command-line interface for Git |
+| Notepad++ | Default Git editor |
+| GitHub/GitLab | Remote repository hosting |
+
+---
+
+# Step 1: Setup Machine with Git Configuration
+
+## 1. Verify Git Installation
+
+Git installation was verified using:
 
 ```bash
 git --version
 ```
 
-Expected Output
+The command displayed the installed Git version, confirming successful installation.
 
-```
-git version 2.xx.x.windows.x
-```
+### Screenshot
 
-Screenshot:
-
-`screenshots/01_git_version.png`
+![Git Version](screenshots/01_git_version.png)
 
 ---
 
-### Configure Username
+## 2. Configure Git Username
+
+Command used:
 
 ```bash
 git config --global user.name "Your Name"
@@ -58,57 +62,65 @@ git config --global user.name "Your Name"
 
 ---
 
-### Configure Email
+## 3. Configure Git Email
+
+Command used:
 
 ```bash
-git config --global user.email "yourmail@example.com"
+git config --global user.email "your_email@example.com"
 ```
 
 ---
 
-### Verify Configuration
+## 4. Verify Git Configuration
+
+Command used:
 
 ```bash
 git config --global --list
 ```
 
-Screenshot:
+The configured username and email were displayed successfully.
 
-`02_git_config.png`
+### Screenshot
+
+![Git Configuration](screenshots/02_git_config.png)
 
 ---
 
-# Step 2: Configure Notepad++
+# Step 2: Configure Notepad++ as Git Default Editor
 
-### Verify Notepad++
+## 1. Verify Notepad++ Availability
+
+Command used:
 
 ```bash
 notepad++
 ```
 
-If not recognized, add the Notepad++ installation path to the Windows Environment Variables.
+If Notepad++ was not recognized, its installation path was added to the system environment variables.
 
-Screenshot:
+### Screenshot
 
-`03_notepad_path.png`
+![Notepad++ Path Configuration](screenshots/03_notepad_path.png)
 
 ---
 
-### Create Alias
+## 2. Create Notepad++ Alias
 
-Open the Bash profile.
+The Git Bash profile was opened using:
 
 ```bash
 notepad ~/.bashrc
 ```
 
-Add
+The following alias was added:
 
 ```bash
 alias np='notepad++'
 ```
 
-Save the file and reload.
+The profile was reloaded:
 
 ```bash
 source ~/.bashrc
@@ -116,54 +128,64 @@ source ~/.bashrc
 
 ---
 
-### Configure Default Editor
+## 3. Configure Notepad++ as Git Editor
+
+Command used:
 
 ```bash
 git config --global core.editor "notepad++"
 ```
 
-Verify
+---
+
+## 4. Verify Default Editor
+
+Command used:
 
 ```bash
 git var GIT_EDITOR
 ```
 
-Screenshot:
+Output confirmed that Notepad++ was configured as the default editor.
 
-`04_default_editor.png`
+### Screenshot
+
+![Default Git Editor](screenshots/04_default_editor.png)
 
 ---
 
-# Step 3: Create Local Repository
+# Step 3: Create a Local Git Repository
 
-Create project folder.
+## 1. Create Project Directory
+
+Commands used:
 
 ```bash
 mkdir GitDemo
 cd GitDemo
 ```
 
-Initialize Git.
+---
+
+## 2. Initialize Git Repository
+
+Command used:
 
 ```bash
 git init
 ```
 
-Screenshot:
+A new empty Git repository was created.
 
-`05_git_init.png`
+### Screenshot
 
----
-
-### Verify Repository
-
-```bash
-ls -la
-```
+![Git Init](screenshots/05_git_init.png)
 
 ---
 
-### Create File
+## 3. Create welcome.txt File
+
+Command used:
 
 ```bash
 echo "Welcome to Git" > welcome.txt
@@ -171,7 +193,9 @@ echo "Welcome to Git" > welcome.txt
 
 ---
 
-### Verify File
+## 4. Verify File Creation
+
+Command used:
 
 ```bash
 ls
@@ -179,125 +203,169 @@ ls
 
 ---
 
-### Display Contents
+## 5. Check File Content
+
+Command used:
 
 ```bash
 cat welcome.txt
 ```
 
+Output:
+
+```
+Welcome to Git
+```
+
 ---
 
-### Check Status
+# Step 4: Add File to Git Repository
+
+## 1. Check Repository Status
+
+Command used:
 
 ```bash
 git status
 ```
 
-Screenshot:
+The file was displayed as an untracked file.
 
-`06_git_status_before_add.png`
+### Screenshot
+
+![Git Status Before Add](screenshots/06_git_status_before_add.png)
 
 ---
 
-### Stage File
+## 2. Add File to Staging Area
+
+Command used:
 
 ```bash
 git add welcome.txt
 ```
 
-Screenshot:
+The file was successfully added to the staging area.
 
-`07_git_add.png`
+### Screenshot
+
+![Git Add](screenshots/07_git_add.png)
 
 ---
 
-### Commit Changes
+## 3. Commit Changes
+
+Command used:
 
 ```bash
 git commit
 ```
 
-Enter a commit message such as
+Commit message:
 
 ```
-Initial commit
+Initial Commit
 
 Created welcome.txt
-Configured first repository
 ```
 
-Screenshot:
+### Screenshot
 
-`08_git_commit.png`
+![Git Commit](screenshots/08_git_commit.png)
 
 ---
 
-### Verify Status
+## 4. Verify Repository Status
+
+Command used:
 
 ```bash
 git status
 ```
 
-Screenshot:
+The working tree was clean after successful commit.
 
-`09_git_status_after_commit.png`
+### Screenshot
+
+![Git Status After Commit](screenshots/09_git_status_after_commit.png)
 
 ---
 
-# Step 4: Remote Repository
+# Step 5: Create Remote Repository
 
-Create a project named **GitDemo** in GitLab.
+A remote repository named **GitDemo** was created on GitHub/GitLab.
 
-Screenshot:
+### Screenshot
 
-`10_gitlab_repository.png`
+![Remote Repository](screenshots/10_repository.png)
 
-Add remote.
+---
+
+# Step 6: Connect Local Repository with Remote Repository
+
+Remote repository was added using:
 
 ```bash
 git remote add origin <repository-url>
 ```
 
-Pull repository.
+Remote connection was verified using:
+
+```bash
+git remote -v
+```
+
+---
+
+# Step 7: Pull and Push Changes
+
+## Pull Remote Repository
+
+Command used:
 
 ```bash
 git pull origin master
 ```
 
-Screenshot:
+---
 
-`11_git_pull.png`
+## Push Local Repository
 
-Push repository.
+Command used:
 
 ```bash
 git push origin master
 ```
 
-Screenshot:
+The local repository was successfully pushed to the remote repository.
 
-`12_git_push.png`
+### Screenshot
+
+![Git Push](screenshots/11_git_push.png)
 
 ---
 
 # Output
 
-- Git configured successfully.
-- Notepad++ configured as default editor.
-- Git repository initialized.
-- welcome.txt committed successfully.
-- Local repository synchronized with GitLab.
+After completing this lab:
+
+- Git was successfully installed and configured.
+- User details were added to Git configuration.
+- Notepad++ was integrated as the default Git editor.
+- A local Git repository was created.
+- Files were tracked and committed.
+- A remote repository was connected.
+- Changes were pushed successfully.
 
 ---
 
 # Learning Outcome
 
-After completing this lab, I learned to:
+By completing this hands-on lab, I learned:
 
-- Install and configure Git.
-- Configure username and email.
-- Set Notepad++ as the default editor.
-- Initialize a local Git repository.
-- Stage and commit files.
-- Connect a local repository with GitLab.
-- Push and pull changes between local and remote repositories.
+- How to configure Git on a local machine.
+- How Git tracks and manages files.
+- How to initialize repositories.
+- How to stage and commit changes.
+- How to connect local repositories with remote repositories.
+- How to synchronize repositories using Git push and pull commands.
