@@ -46,7 +46,7 @@ git version 2.xx.x.windows.x
 
 Screenshot:
 
-`01_git_version.png`
+`screenshots/01_git_version.png`
 
 ---
 
