@@ -1,5 +1,3 @@
-
-````markdown
 # Assignment 5: Perform Conditional Logic for Grade Calculation
 
 ## Objective
