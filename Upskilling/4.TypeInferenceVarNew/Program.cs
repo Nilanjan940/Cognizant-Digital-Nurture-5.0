@@ -36,7 +36,7 @@ class Program
         student1.Display();
         Console.WriteLine("\n--------------------------------\n");
 
-        //Target-typed new()
+        //Object creation using var
         var student2 = new Student("Bob", 22);
         Console.WriteLine("Student created using target-typed new:");
         student2.Display();
