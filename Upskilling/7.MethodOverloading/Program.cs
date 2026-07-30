@@ -44,5 +44,6 @@ class Program
         //Using method 4
         double total4 = calculator.CalculateTotal(12.5, 7.5);
         Console.WriteLine("Total of two doubles: " + total4);
+
     }
 }
